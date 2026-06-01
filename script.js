@@ -8,39 +8,59 @@ const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 
 menuBtn.addEventListener("click", () => {
+
     nav.classList.toggle("active");
 
-    if (nav.classList.contains("active")) {
-        nav.style.display = "block";
-    } else {
-        nav.style.display = "none";
+    if(nav.classList.contains("active")){
+
+        menuBtn.innerHTML =
+        '<i class="fas fa-times"></i>';
+
+    }else{
+
+        menuBtn.innerHTML =
+        '<i class="fas fa-bars"></i>';
+
     }
+
 });
 
 // ===============================
 // 404 POPUP
 // ===============================
 
-const errorLinks = document.querySelectorAll(".error-link");
 const popup = document.querySelector(".popup");
 const backBtn = document.getElementById("backBtn");
 
-errorLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
+// ALL LINKS AND BUTTONS WITH error-link CLASS
+
+document.querySelectorAll(".error-link").forEach(item => {
+
+    item.addEventListener("click", function(e){
+
         e.preventDefault();
+
         popup.classList.add("active");
+
         document.body.style.overflow = "hidden";
+
     });
+
 });
 
+// GO BACK HOME BUTTON
+
 backBtn.addEventListener("click", () => {
+
     popup.classList.remove("active");
+
     document.body.style.overflow = "auto";
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
 });
 
 popup.addEventListener("click", (e) => {
@@ -209,14 +229,12 @@ galleryImages.forEach(img => {
 // COUNTER ANIMATION
 // ===============================
 
-const counters = document.querySelectorAll(".counter-box h2");
+const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-    const targetText = counter.innerText;
-
     const target =
-    parseInt(targetText.replace(/\D/g, ""));
+    +counter.getAttribute("data-target");
 
     let count = 0;
 
@@ -224,7 +242,7 @@ counters.forEach(counter => {
 
         const increment = target / 100;
 
-        if (count < target) {
+        if(count < target){
 
             count += increment;
 
@@ -233,13 +251,17 @@ counters.forEach(counter => {
 
             requestAnimationFrame(updateCounter);
 
-        } else {
+        }else{
 
-            counter.innerText = targetText;
+            counter.innerText =
+            target + "+";
+
         }
+
     };
 
     updateCounter();
+
 });
 
 // ===============================
