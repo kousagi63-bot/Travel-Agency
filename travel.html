@@ -1,101 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agency</title>
-    <link rel="stylesheet" href="travel.css">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STACKLY - Explore The World</title>
+
+<link rel="stylesheet" href="travel.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
+
+<!-- HEADER -->
 
 <header>
     <div class="logo">
-        <img src="images/stackly-logo.png" alt="Stackly Logo">
-    </div>
-
+    <img src="images/stackly-logo.png" alt="Stackly Logo">
+</div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
+
             <li><a href="#" class="error-link">Destinations</a></li>
+
             <li><a href="#" class="error-link">Packages</a></li>
+
+            <li><a href="#" class="error-link">Gallery</a></li>
+
             <li><a href="#" class="error-link">About</a></li>
+
             <li><a href="#" class="error-link">Contact</a></li>
         </ul>
     </nav>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
 </header>
 
-<section class="hero">
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
     <div class="hero-content">
-        <h1>Explore Your Dream Destination</h1>
-        <p>Discover Amazing Places Around The World</p>
-        <button>Book Now</button>
+
+        <span>WELCOME TO STACKLY</span>
+
+        <h1>
+            Discover Amazing Places Around The World
+        </h1>
+
+        <p>
+            Experience unforgettable adventures, luxury stays,
+            beautiful destinations and personalized travel packages.
+        </p>
+
+        <a href="#" class="hero-btn">
+            Start Your Journey
+        </a>
+
     </div>
 
-    <div class="plane">
-        <i class="fa-solid fa-plane"></i>
-    </div>
 </section>
 
-<section class="destinations">
-    <h2>Popular Destinations</h2>
+<!-- SEARCH TOUR -->
 
-    <div class="cards">
+<section class="search-box">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600" alt="">
-            <h3>Bali</h3>
+    <div class="search-card">
+
+        <div>
+            <label>Destination</label>
+            <input type="text" placeholder="Choose Destination">
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600" alt="">
-            <h3>Maldives</h3>
+        <div>
+            <label>Check In</label>
+            <input type="date">
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="">
-            <h3>Dubai</h3>
+        <div>
+            <label>Travelers</label>
+            <input type="number" placeholder="2">
+        </div>
+
+        <button>Search</button>
+
+    </div>
+
+</section>
+
+<!-- POPULAR DESTINATIONS -->
+
+<section class="section">
+
+    <div class="title">
+        <span>TOP DESTINATIONS</span>
+        <h2>Popular Travel Destinations</h2>
+    </div>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <div class="content">
+                <h3>Maldives</h3>
+                <p>Luxury Beaches & Resorts</p>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <div class="content">
+                <h3>Switzerland</h3>
+                <p>Snow Mountains & Nature</p>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a">
+            <div class="content">
+                <h3>Paris</h3>
+                <p>Romantic City Experience</p>
+            </div>
         </div>
 
     </div>
+
 </section>
 
-<section class="packages">
-    <h2>Travel Packages</h2>
+<!-- TOUR PACKAGES -->
 
-    <div class="cards">
+<section class="section dark">
 
-        <div class="card">
-            <h3>Honeymoon Package</h3>
-            <p>5 Days / 4 Nights</p>
+    <div class="title">
+        <span>BEST PACKAGES</span>
+        <h2>Featured Tour Packages</h2>
+    </div>
+
+    <div class="package-grid">
+
+        <div class="package-card">
+            <h3>Weekend Escape</h3>
+            <p>3 Days / 2 Nights</p>
+            <h4>INR 50K</h4>
         </div>
 
-        <div class="card">
-            <h3>Family Vacation</h3>
+        <div class="package-card">
+            <h3>Luxury Vacation</h3>
             <p>7 Days / 6 Nights</p>
+            <h4>INR 70K</h4>
         </div>
 
-        <div class="card">
+        <div class="package-card">
             <h3>Adventure Tour</h3>
-            <p>4 Days / 3 Nights</p>
+            <p>10 Days / 9 Nights</p>
+            <h4>INR 90K</h4>
         </div>
 
     </div>
+
 </section>
 
-<div id="popup" class="popup">
-    <div class="popup-box">
-        <h2>404</h2>
-        <p>Page Not Found</p>
-        <button onclick="closePopup()">Go Back</button>
+<!-- WHY CHOOSE US -->
+
+<section class="section">
+
+    <div class="title">
+        <span>WHY CHOOSE US</span>
+        <h2>Travel Better With STACKLY</h2>
     </div>
-</div>
+
+    <div class="features">
+
+        <div class="feature-box">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Worldwide Tours</h3>
+            <p>Explore destinations across the globe.</p>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-hotel"></i>
+            <h3>Luxury Hotels</h3>
+            <p>Premium accommodation and comfort.</p>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Travel assistance whenever you need.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COUNTERS -->
+
+<section class="counter-section">
+
+    <div class="counter-box">
+        <h2>500+</h2>
+        <p>Happy Travelers</p>
+    </div>
+
+    <div class="counter-box">
+        <h2>120+</h2>
+        <p>Destinations</p>
+    </div>
+
+    <div class="counter-box">
+        <h2>50+</h2>
+        <p>Tour Guides</p>
+    </div>
+
+    <div class="counter-box">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+    <div class="title">
+        <span>TRAVEL GALLERY</span>
+        <h2>Captured Memories</h2>
+    </div>
+
+    <div class="gallery">
+
+        
+
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828">
+
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="section dark">
+
+    <div class="title">
+        <span>TESTIMONIALS</span>
+        <h2>What Our Clients Say</h2>
+    </div>
+
+    <div class="testimonial">
+
+        <p>
+            "STACKLY made our honeymoon trip absolutely
+            perfect. Everything was well organized and
+            stress-free."
+        </p>
+
+        <h4></h4>
+
+    </div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <h2>Get Travel Updates</h2>
+
+    <p>
+        Subscribe to receive exclusive deals and travel tips.
+    </p>
+
+    <div class="subscribe">
+
+        <input type="email"
+        placeholder="Enter your email">
+
+        <button>Subscribe</button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-    <p>© 2026 Stackly. All Rights Reserved.</p>
+
+    <div class="footer-content">
+
+        
+
+        <p>
+            Explore • Discover • Experience
+        </p>
+
+        <div class="social">
+
+            <i class="fab fa-facebook-f"></i>
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-x-twitter"></i>
+
+            <i class="fab fa-youtube"></i>
+
+            <h2>© 2026 Stackly. All rights reserved.</h2>
+             
+        </div>
+
+    </div>
+
 </footer>
 
+<!-- 404 POPUP -->
+
+<div class="popup">
+
+    <div class="popup-box">
+
+        <h1>404</h1>
+
+        <h3>Page Not Found</h3>
+
+        <p>
+            This page is currently unavailable.
+        </p>
+
+        <button id="backBtn">
+            Go Back Home
+        </button>
+
+    </div>
+
+</div>
+
 <script src="travel.js"></script>
+
 </body>
+<!-- LOADING SCREEN -->
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-icon">
+            ✈️
+        </div>
+
+        <h2>STACKLY</h2>
+
+        <p>Loading your dream journey...</p>
+
+        <div class="loader-bar">
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
 </html>
